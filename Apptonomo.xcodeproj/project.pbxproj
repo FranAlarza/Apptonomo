@@ -14,6 +14,8 @@
 		2685229C2B0C1B8300582122 /* ApptonomoTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2685229B2B0C1B8300582122 /* ApptonomoTests.swift */; };
 		268522A62B0C1B8300582122 /* ApptonomoUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 268522A52B0C1B8300582122 /* ApptonomoUITests.swift */; };
 		268522A82B0C1B8300582122 /* ApptonomoUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 268522A72B0C1B8300582122 /* ApptonomoUITestsLaunchTests.swift */; };
+		268522B52B0C22E200582122 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 268522B42B0C22E200582122 /* GoogleService-Info.plist */; };
+		268522B82B0C243E00582122 /* FirebaseAnalytics in Frameworks */ = {isa = PBXBuildFile; productRef = 268522B72B0C243E00582122 /* FirebaseAnalytics */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -44,6 +46,7 @@
 		268522A12B0C1B8300582122 /* ApptonomoUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ApptonomoUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		268522A52B0C1B8300582122 /* ApptonomoUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApptonomoUITests.swift; sourceTree = "<group>"; };
 		268522A72B0C1B8300582122 /* ApptonomoUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApptonomoUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		268522B42B0C22E200582122 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -51,6 +54,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				268522B82B0C243E00582122 /* FirebaseAnalytics in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -96,6 +100,7 @@
 			children = (
 				2685228A2B0C1B8100582122 /* ApptonomoApp.swift */,
 				2685228C2B0C1B8100582122 /* ContentView.swift */,
+				268522B42B0C22E200582122 /* GoogleService-Info.plist */,
 				2685228E2B0C1B8200582122 /* Assets.xcassets */,
 				268522902B0C1B8200582122 /* Preview Content */,
 			);
@@ -143,6 +148,9 @@
 			dependencies = (
 			);
 			name = Apptonomo;
+			packageProductDependencies = (
+				268522B72B0C243E00582122 /* FirebaseAnalytics */,
+			);
 			productName = Apptonomo;
 			productReference = 268522872B0C1B8100582122 /* Apptonomo.app */;
 			productType = "com.apple.product-type.application";
@@ -215,6 +223,9 @@
 				Base,
 			);
 			mainGroup = 2685227E2B0C1B8100582122;
+			packageReferences = (
+				268522B62B0C243E00582122 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */,
+			);
 			productRefGroup = 268522882B0C1B8100582122 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -233,6 +244,7 @@
 			files = (
 				268522922B0C1B8200582122 /* Preview Assets.xcassets in Resources */,
 				2685228F2B0C1B8200582122 /* Assets.xcassets in Resources */,
+				268522B52B0C22E200582122 /* GoogleService-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -588,6 +600,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		268522B62B0C243E00582122 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/firebase/firebase-ios-sdk";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 10.18.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		268522B72B0C243E00582122 /* FirebaseAnalytics */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 268522B62B0C243E00582122 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseAnalytics;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 2685227F2B0C1B8100582122 /* Project object */;
 }
